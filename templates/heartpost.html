@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block blogactive %}active{% endblock blogactive %}
+{% block body %}
+<div class = "container">
+    <h1 class="my-3">{{heartdiseases.title}}</h1>
+    <div class ="row">
+        {{heartdiseases.content|safe}}
+         <div>
+            <img src="{{ heartdiseases.image.url}}" alt="{{heartdiseases.title }}">
+    </div>
+</div>
+</div>
+{% endblock body %}

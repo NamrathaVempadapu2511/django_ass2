@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block blogactive %}active{% endblock blogactive %}
+{% block body %}
+<div class="container">
+  <h1 class=""my-3">Welcome to firstpage coders blog</h1>
+  {% for home in homes %}
+  <div class="my-4">
+    <h3 class="text-dark"><a href="/blogpost/{{home.slug}}" class = "text-dark">{{home.title}}</a></h3>
+    <div class = "my-2">
+    {{home.content|slice:15}}...
+    <div>
+            <img src="{{ home.image }}" alt="{{ home.title }}">
+    </div>
+    </div>
+    <a href="/blogpost/{{home.slug}}" class = "text-dark"><button class="btn btn-primary">Read more....</button></a>
+</div>
+{% endfor %}
+{% endblock body %}

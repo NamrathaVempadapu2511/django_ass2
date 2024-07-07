@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block homeactive %}active{% endblock homeactive %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <style>
+  }
+  body{
+    background-image: url("http://4.bp.blogspot.com/-Uk_KFP52APE/URd2jbxosPI/AAAAAAAAKwo/dPSSk-YE4MQ/s1600/plain+blue+cool+hd+images.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: palevioletred;
+  background-color: lavenderblush;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: lightblue;
+color:aliceblue}
+
+.button:active {
+  background-color: lightpink;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+  .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: lavender;
+   color: palevioletred;
+   text-align: center;
+}
+  </style>
+</head>
+<body>
+    <div style="padding:250px 10px 10px 200px">
+    <a href="/mentalhealth" method = 'get' class="button" style="padding:150px 10px 10px 100px">Mentalhealth</a>
+    </div>
+    <div style="padding:0px 10px 100px 1100px">
+    <a href="/heartdiseases" method = 'get' class="button" style="padding:150px 10px 10px 100px">HeartDiseases</a>
+    </div>
+    <div style="padding:250px 10px 10px 200px">
+    <a href="/covid" method = 'get' class="button" style="padding:150px 10px 10px 100px">Covid_data</a>
+    </div>
+    <div style="padding:0px 10px 100px 1100px">
+    <a href="/immunization" method = 'get' class="button" style="padding:150px 10px 10px 100px">Immunization</a>
+    </div>
+    <div class ="footer">
+    <p>Author: Namratha Vempadapu<br>
+    <a href="https://www.youtube.com/">@for any query</a></p>
+    </div>
+</body>
+</html>
+{% endblock body %}
