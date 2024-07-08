@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block blogactive %}active{% endblock blogactive %}
+{% block body %}
+<div class="container">
+  <h1 class=""my-3">Welcome to Heart Diseses blog</h1>
+  {% for heartdiseases in heartdiseasess %}
+  <div class="my-4">
+    <h3 class="text-dark"><a href="/heartpost/{{heartdiseases.slug}}" class = "text-dark">{{heartdiseases.title}}</a></h3>
+    <div class = "my-2">
+    {{heartdiseases.content|slice:115}}...
+    </div>
+    <a href="/heartpost/{{heartdiseases.slug}}" class = "text-dark"><button class="btn btn-primary">Read more....</button></a>
+</div>
+{% endfor %}
+{% endblock body %}
